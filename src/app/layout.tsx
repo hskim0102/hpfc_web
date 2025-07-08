@@ -80,10 +80,10 @@ export default function RootLayout({
                 </li>
                 <li>
                   <Link
-                    href="/join"
+                    href="/photos"
                     className="text-white hover:text-[#ffd966] transition"
                   >
-                    가입 문의
+                    경기 사진
                   </Link>
                 </li>
               </ul>

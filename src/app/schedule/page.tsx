@@ -13,16 +13,40 @@ export default function Schedule() {
         </thead>
         <tbody>
           <tr>
-            <td className="py-2 px-4">2024-06-15</td>
+            <td className="py-2 px-4">2025-07-06</td>
             <td className="py-2 px-4">평화FC</td>
-            <td className="py-2 px-4">하늘구장</td>
+            <td className="py-2 px-4">아크풋살스타디움</td>
             <td className="py-2 px-4">친선전</td>
           </tr>
           <tr>
-            <td className="py-2 px-4">2024-07-06</td>
-            <td className="py-2 px-4">드림SC</td>
-            <td className="py-2 px-4">드림구장</td>
+            <td className="py-2 px-4">2025-06-15</td>
+            <td className="py-2 px-4">평화FC</td>
+            <td className="py-2 px-4">동대문 팟살피치</td>
+            <td className="py-2 px-4">친선전</td>
+          </tr>
+          <tr>
+            <td className="py-2 px-4">2025-05-18</td>
+            <td className="py-2 px-4">평화FC</td>
+            <td className="py-2 px-4">이그교풋살장</td>
             <td className="py-2 px-4">리그전</td>
+          </tr>
+          <tr>
+            <td className="py-2 px-4">2024-05-04</td>
+            <td className="py-2 px-4">평화FC</td>
+            <td className="py-2 px-4">도봉풋살장</td>
+            <td className="py-2 px-4">친선전</td>
+          </tr>
+          <tr>
+            <td className="py-2 px-4">2025-04-06</td>
+            <td className="py-2 px-4">평화FC</td>
+            <td className="py-2 px-4">도봉풋살장</td>
+            <td className="py-2 px-4">친선전</td>
+          </tr>
+          <tr>
+            <td className="py-2 px-4">2025-03-09</td>
+            <td className="py-2 px-4">평화FC</td>
+            <td className="py-2 px-4">도봉풋살장</td>
+            <td className="py-2 px-4">친선전</td>
           </tr>
         </tbody>
       </table>
