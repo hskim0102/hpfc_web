@@ -136,8 +136,26 @@ export default function Photos() {
               <p className="text-slate-300 text-sm">도봉 풋살장 2구장</p>
             </div>
           </div>
-        </div>
 
+
+          <div className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-2xl border border-slate-600 hover:scale-105 hover:shadow-red-500/20 hover:border-red-500 transition-all duration-300 overflow-hidden">
+            <div className="relative h-64">
+              <Image
+                src="/flag.jpeg"
+                alt="FC 깃발"
+                fill
+                style={{ objectFit: "cover" }}
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="text-lg font-bold text-white mb-2">
+                FC 깃발
+              </h3>
+              <p className="text-slate-300 text-sm">하늘평화 FC 사무실 앞</p>
+            </div>
+          </div>
+        </div>
         {/* 페이지네이션 */}
         <div className="mt-12 flex justify-center"></div>
       </div>

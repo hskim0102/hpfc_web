@@ -97,7 +97,7 @@ export default function Squad() {
           </div>
           <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">이한빈</h2>
           <div className="text-lg font-semibold text-[#22577a] mb-2">
-            AM (공격형 미드필더)
+            피보 (PIVO)
           </div>
           <p className="text-[#22577a] mb-2">
             풋살마스터, 팀의 중심을 잡아주는 플레이메이커
@@ -118,7 +118,7 @@ export default function Squad() {
           </div>
           <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">이승재</h2>
           <div className="text-lg font-semibold text-[#22577a] mb-2">
-            DM (수비형 미드필더)
+           필소 (FIXO)
           </div>
           <p className="text-[#22577a] mb-2">
             클럽 주장, 철통 방어가 장점
@@ -129,7 +129,7 @@ export default function Squad() {
           <div className="w-48 h-48 relative mb-4">
             <Image
               src="/kang.png"
-              alt="강췅원 선수"
+              alt="강충원 선수"
               fill
               style={{ objectFit: "cover" }}
               className="rounded-xl border-4 border-[#3a6ea5] shadow-lg"
@@ -137,7 +137,7 @@ export default function Squad() {
           </div>
           <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">강충원</h2>
           <div className="text-lg font-semibold text-[#22577a] mb-2">
-            GK (골키퍼)
+            골레이로 (GOLEIRO)
           </div>
           <p className="text-[#22577a] mb-2">철벽 수문장</p>
           <RadarChart stats={[90, 95, 90, 85, 80, 80]} />
@@ -154,7 +154,7 @@ export default function Squad() {
           </div>
           <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">이민용</h2>
           <div className="text-lg font-semibold text-[#22577a] mb-2">
-            CM (중앙 미드필더)
+            픽소 (FIXO)
           </div>
           <p className="text-[#22577a] mb-2">폭풍같은 공격수</p>
           <RadarChart stats={[90, 85, 90, 90, 85, 90]} />
@@ -171,7 +171,7 @@ export default function Squad() {
           </div>
           <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">임현묵</h2>
           <div className="text-lg font-semibold text-[#22577a] mb-2">
-            CB (센터백)
+            픽소 (FIXO)
           </div>
           <p className="text-[#22577a] mb-2">치밀한 전략가</p>
           <RadarChart stats={[80, 80, 85, 85, 70, 120]} />
@@ -188,7 +188,7 @@ export default function Squad() {
           </div>
           <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">정재훈</h2>
           <div className="text-lg font-semibold text-[#22577a] mb-2">
-            ST (최전방 공격수)
+            피보 (PIVO)
           </div>
           <p className="text-[#22577a] mb-2">날쌘돌이 공격수</p>
           <RadarChart stats={[90, 85, 80, 80, 90, 85]} />
@@ -205,7 +205,7 @@ export default function Squad() {
           </div>
           <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">윤동현</h2>
           <div className="text-lg font-semibold text-[#22577a] mb-2">
-            RW (윙어)
+            피보 (PIVO)
           </div>
           <p className="text-[#22577a] mb-2">최강의 슛터</p>
           <RadarChart stats={[85, 100, 80, 80, 80, 85]} />
@@ -222,10 +222,44 @@ export default function Squad() {
           </div>
           <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">윤상일</h2>
           <div className="text-lg font-semibold text-[#22577a] mb-2">
-            LW (윙어)
+            아라 (ALA)
           </div>
           <p className="text-[#22577a] mb-2">군대 축구 최강자</p>
           <RadarChart stats={[85, 85, 80, 80, 90, 90]} />
+        </div>
+        <div className="bg-[#e3f0ff] rounded-2xl shadow-xl border-2 border-[#b3d8ff] flex flex-col items-center p-6 w-72">
+          <div className="w-48 h-48 relative mb-4">
+            <Image
+              src="/ho.png"
+              alt="김현호 선수"
+              fill
+              style={{ objectFit: "cover" }}
+              className="rounded-xl border-4 border-[#3a6ea5] shadow-lg"
+            />
+          </div>
+          <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">김현호</h2>
+          <div className="text-lg font-semibold text-[#22577a] mb-2">
+            픽소 (FIXO)
+          </div>
+          <p className="text-[#22577a] mb-2">부상 투혼</p>
+          <RadarChart stats={[90, 80, 70, 60, 85, 90]} />
+        </div>
+        <div className="bg-[#e3f0ff] rounded-2xl shadow-xl border-2 border-[#b3d8ff] flex flex-col items-center p-6 w-72">
+          <div className="w-48 h-48 relative mb-4">
+            <Image
+              src="/kim.png"
+              alt="김호섭 선수"
+              fill
+              style={{ objectFit: "cover" }}
+              className="rounded-xl border-4 border-[#3a6ea5] shadow-lg"
+            />
+          </div>
+          <h2 className="text-2xl font-bold text-[#3a6ea5] mb-1">김호섭</h2>
+          <div className="text-lg font-semibold text-[#22577a] mb-2">
+            아라 (ALA)
+          </div>
+          <p className="text-[#22577a] mb-2">럭키 가이</p>
+          <RadarChart stats={[75, 65, 60, 80, 70, 80]} />
         </div>
       </div>
     </section>
