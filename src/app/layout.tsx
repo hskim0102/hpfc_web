@@ -3,6 +3,13 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  FaUsers,
+  FaCalendarAlt,
+  FaRegComments,
+  FaCameraRetro,
+  FaHome,
+} from "react-icons/fa";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,13 +52,62 @@ export default function RootLayout({
               </span>
             </div>
             <nav>
-              <ul className="flex gap-8 text-lg font-semibold">
+              {/* 데스크탑 메뉴 */}
+              <ul className="hidden md:flex gap-8 text-lg font-semibold">
+                <li>
+                  <Link
+                    href="/"
+                    className="text-white hover:text-[#ffd966] transition flex items-center gap-1"
+                  >
+                    <FaHome className="inline-block md:hidden" />
+                    클럽 소개
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/squad"
+                    className="text-white hover:text-[#ffd966] transition flex items-center gap-1"
+                  >
+                    <FaUsers className="inline-block md:hidden" />
+                    선수단 소개
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/schedule"
+                    className="text-white hover:text-[#ffd966] transition flex items-center gap-1"
+                  >
+                    <FaCalendarAlt className="inline-block md:hidden" />
+                    시합 일정
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/board"
+                    className="text-white hover:text-[#ffd966] transition flex items-center gap-1"
+                  >
+                    <FaRegComments className="inline-block md:hidden" />
+                    게시판
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/photos"
+                    className="text-white hover:text-[#ffd966] transition flex items-center gap-1"
+                  >
+                    <FaCameraRetro className="inline-block md:hidden" />
+                    경기 사진
+                  </Link>
+                </li>
+              </ul>
+              {/* 모바일 메뉴 (아이콘만) */}
+              <ul className="flex md:hidden gap-6 text-2xl">
                 <li>
                   <Link
                     href="/"
                     className="text-white hover:text-[#ffd966] transition"
                   >
-                    클럽 소개
+                    <FaHome />
                   </Link>
                 </li>
                 <li>
@@ -59,7 +115,7 @@ export default function RootLayout({
                     href="/squad"
                     className="text-white hover:text-[#ffd966] transition"
                   >
-                    선수단 소개
+                    <FaUsers />
                   </Link>
                 </li>
                 <li>
@@ -67,7 +123,7 @@ export default function RootLayout({
                     href="/schedule"
                     className="text-white hover:text-[#ffd966] transition"
                   >
-                    시합 일정
+                    <FaCalendarAlt />
                   </Link>
                 </li>
                 <li>
@@ -75,7 +131,7 @@ export default function RootLayout({
                     href="/board"
                     className="text-white hover:text-[#ffd966] transition"
                   >
-                    게시판
+                    <FaRegComments />
                   </Link>
                 </li>
                 <li>
@@ -83,7 +139,7 @@ export default function RootLayout({
                     href="/photos"
                     className="text-white hover:text-[#ffd966] transition"
                   >
-                    경기 사진
+                    <FaCameraRetro />
                   </Link>
                 </li>
               </ul>
