@@ -11,10 +11,77 @@ import {
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col items-center gap-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 min-h-screen relative overflow-x-hidden">
-      {/* 움직이는 빛 효과 */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120vw] h-[60vh] pointer-events-none z-0">
-        <div className="absolute w-full h-full bg-gradient-to-br from-red-500/10 via-blue-400/10 to-transparent rounded-full blur-3xl animate-pulse-slow" />
+    <div className="w-full flex flex-col items-center gap-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 min-h-screen relative overflow-hidden">
+      {/* 메인 배경 그라데이션 오버레이 */}
+      <div className="fixed inset-0 bg-gradient-to-br from-red-900/20 via-purple-900/30 to-blue-900/40 animate-gradient-shift pointer-events-none z-0" />
+      
+      {/* 추가 배경 레이어 - 동적 그라데이션 */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/5 to-transparent animate-wave-1" />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-blue-500/5 to-transparent animate-wave-2" />
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-purple-500/5 to-transparent animate-wave-3" />
+      </div>
+      
+      {/* 기하학적 요소들 */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* 다이아몬드 모양들 */}
+        <div className="absolute top-[15%] left-[8%] w-6 h-6 bg-red-400/20 rotate-45 animate-float-diamond-1 shadow-lg shadow-red-400/30" />
+        <div className="absolute top-[35%] right-[12%] w-8 h-8 bg-blue-400/20 rotate-45 animate-float-diamond-2 shadow-lg shadow-blue-400/30" />
+        <div className="absolute bottom-[25%] left-[15%] w-4 h-4 bg-purple-400/20 rotate-45 animate-float-diamond-3 shadow-lg shadow-purple-400/30" />
+        <div className="absolute top-[70%] right-[25%] w-5 h-5 bg-pink-400/20 rotate-45 animate-float-diamond-1 shadow-lg shadow-pink-400/30" />
+        
+        {/* 육각형 요소들 */}
+        <div className="absolute top-[45%] left-[5%] w-10 h-10 border-2 border-cyan-400/30 animate-spin-hex shadow-lg shadow-cyan-400/20" 
+             style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}} />
+        <div className="absolute bottom-[45%] right-[8%] w-8 h-8 border-2 border-yellow-400/30 animate-spin-hex-reverse shadow-lg shadow-yellow-400/20" 
+             style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}} />
+      </div>
+      
+      {/* 움직이는 오로라 효과 - 더 강화 */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div className="absolute top-[20%] left-[10%] w-[80vw] h-[40vh] bg-gradient-to-r from-red-500/15 via-pink-500/20 to-transparent rounded-full blur-3xl animate-float-1" />
+        <div className="absolute top-[40%] right-[10%] w-[70vw] h-[35vh] bg-gradient-to-l from-blue-500/15 via-cyan-500/20 to-transparent rounded-full blur-3xl animate-float-2" />
+        <div className="absolute bottom-[30%] left-[20%] w-[60vw] h-[30vh] bg-gradient-to-r from-purple-500/15 via-violet-500/20 to-transparent rounded-full blur-3xl animate-float-3" />
+        {/* 추가 오로라 */}
+        <div className="absolute top-[10%] right-[30%] w-[50vw] h-[25vh] bg-gradient-to-br from-emerald-500/12 via-teal-500/18 to-transparent rounded-full blur-3xl animate-float-4" />
+        <div className="absolute bottom-[10%] left-[40%] w-[45vw] h-[20vh] bg-gradient-to-tl from-orange-500/12 via-red-500/18 to-transparent rounded-full blur-3xl animate-float-5" />
+      </div>
+      
+      {/* 더 많은 빛나는 파티클 효과 */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute top-[10%] left-[15%] w-2 h-2 bg-red-400 rounded-full animate-twinkle-1 shadow-lg shadow-red-400/50" />
+        <div className="absolute top-[25%] right-[20%] w-1 h-1 bg-blue-400 rounded-full animate-twinkle-2 shadow-lg shadow-blue-400/50" />
+        <div className="absolute top-[45%] left-[25%] w-1.5 h-1.5 bg-purple-400 rounded-full animate-twinkle-3 shadow-lg shadow-purple-400/50" />
+        <div className="absolute bottom-[40%] right-[15%] w-2 h-2 bg-pink-400 rounded-full animate-twinkle-1 shadow-lg shadow-pink-400/50" />
+        <div className="absolute bottom-[60%] left-[80%] w-1 h-1 bg-cyan-400 rounded-full animate-twinkle-2 shadow-lg shadow-cyan-400/50" />
+        <div className="absolute top-[60%] left-[5%] w-1.5 h-1.5 bg-yellow-400 rounded-full animate-twinkle-3 shadow-lg shadow-yellow-400/50" />
+        {/* 추가 파티클들 */}
+        <div className="absolute top-[55%] right-[45%] w-1 h-1 bg-emerald-400 rounded-full animate-twinkle-4 shadow-lg shadow-emerald-400/50" />
+        <div className="absolute bottom-[35%] left-[60%] w-1.5 h-1.5 bg-orange-400 rounded-full animate-twinkle-5 shadow-lg shadow-orange-400/50" />
+        <div className="absolute top-[80%] right-[70%] w-2 h-2 bg-indigo-400 rounded-full animate-twinkle-6 shadow-lg shadow-indigo-400/50" />
+        <div className="absolute top-[30%] left-[70%] w-1 h-1 bg-rose-400 rounded-full animate-twinkle-4 shadow-lg shadow-rose-400/50" />
+      </div>
+      
+      {/* 움직이는 그라데이션 링 - 더 많이 */}
+      <div className="absolute top-[30%] left-[70%] w-64 h-64 border-2 border-gradient-to-r from-red-400/30 to-transparent rounded-full animate-spin-reverse pointer-events-none z-0" />
+      <div className="absolute bottom-[20%] right-[60%] w-48 h-48 border-2 border-gradient-to-l from-blue-400/20 to-transparent rounded-full animate-spin-slow pointer-events-none z-0" />
+      <div className="absolute top-[10%] left-[20%] w-32 h-32 border border-purple-400/25 rounded-full animate-spin-medium pointer-events-none z-0" />
+      <div className="absolute bottom-[50%] right-[20%] w-40 h-40 border-2 border-gradient-to-tr from-cyan-400/25 to-transparent rounded-full animate-spin-reverse-slow pointer-events-none z-0" />
+      
+      {/* 네온 그리드 효과 */}
+      <div className="absolute inset-0 pointer-events-none z-0 opacity-10">
+        <div className="animate-grid-move"
+             style={{
+               backgroundImage: `
+                 linear-gradient(rgba(239, 68, 68, 0.3) 1px, transparent 1px),
+                 linear-gradient(90deg, rgba(239, 68, 68, 0.3) 1px, transparent 1px),
+                 linear-gradient(rgba(59, 130, 246, 0.2) 1px, transparent 1px),
+                 linear-gradient(90deg, rgba(59, 130, 246, 0.2) 1px, transparent 1px)
+               `,
+               backgroundSize: '100px 100px, 100px 100px, 50px 50px, 50px 50px',
+               backgroundPosition: '0 0, 0 0, 25px 25px, 25px 25px'
+             }} 
+              />
       </div>
 
       {/* 히어로 섹션 */}
@@ -195,9 +262,109 @@ export default function Home() {
           .animate-spin-slow {
             animation: spin 18s linear infinite;
           }
+          .animate-spin-reverse {
+            animation: spin 25s linear infinite reverse;
+          }
           .animate-pulse-slow {
             animation: pulse 6s cubic-bezier(.4,0,.6,1) infinite;
           }
+          .animate-gradient-shift {
+            animation: gradientShift 15s ease-in-out infinite;
+          }
+          .animate-float-1 {
+            animation: float1 20s ease-in-out infinite;
+          }
+          .animate-float-2 {
+            animation: float2 25s ease-in-out infinite;
+          }
+          .animate-float-3 {
+            animation: float3 30s ease-in-out infinite;
+          }
+          .animate-float-4 {
+            animation: float4 35s ease-in-out infinite;
+          }
+          .animate-float-5 {
+            animation: float5 40s ease-in-out infinite;
+          }
+          .animate-twinkle-1 {
+            animation: twinkle 3s ease-in-out infinite;
+          }
+          .animate-twinkle-2 {
+            animation: twinkle 4s ease-in-out infinite 0.5s;
+          }
+          .animate-twinkle-3 {
+            animation: twinkle 5s ease-in-out infinite 1s;
+          }
+          .animate-twinkle-4 {
+            animation: twinkle 3.5s ease-in-out infinite 1.5s;
+          }
+          .animate-twinkle-5 {
+            animation: twinkle 4.5s ease-in-out infinite 2s;
+          }
+          .animate-twinkle-6 {
+            animation: twinkle 2.5s ease-in-out infinite 0.8s;
+          }
+          .animate-float-diamond-1 {
+            animation: floatDiamond 12s ease-in-out infinite;
+          }
+          .animate-float-diamond-2 {
+            animation: floatDiamond 15s ease-in-out infinite;
+          }
+          .animate-float-diamond-3 {
+            animation: floatDiamond 18s ease-in-out infinite;
+          }
+          .animate-spin-medium {
+            animation: spin 14s linear infinite;
+          }
+          .animate-spin-reverse-slow {
+            animation: spin 22s linear infinite reverse;
+          }
+          .animate-wave-1 {
+            animation: wave1 8s ease-in-out infinite;
+          }
+          .animate-wave-2 {
+            animation: wave2 10s ease-in-out infinite;
+          }
+          .animate-wave-3 {
+            animation: wave3 12s ease-in-out infinite;
+          }
+          .animate-twinkle-4 {
+            animation: twinkle 6s ease-in-out infinite 1.5s;
+          }
+          .animate-twinkle-5 {
+            animation: twinkle 7s ease-in-out infinite 2s;
+          }
+          .animate-twinkle-6 {
+            animation: twinkle 8s ease-in-out infinite 2.5s;
+          }
+          .animate-wave-1 {
+            animation: wave 10s ease-in-out infinite;
+          }
+          .animate-wave-2 {
+            animation: wave 12s ease-in-out infinite;
+          }
+          .animate-wave-3 {
+            animation: wave 14s ease-in-out infinite;
+          }
+          .animate-float-diamond-1 {
+            animation: floatDiamond 18s ease-in-out infinite;
+          }
+          .animate-float-diamond-2 {
+            animation: floatDiamond 22s ease-in-out infinite;
+          }
+          .animate-float-diamond-3 {
+            animation: floatDiamond 26s ease-in-out infinite;
+          }
+          .animate-spin-hex {
+            animation: spinHex 20s linear infinite;
+          }
+          .animate-spin-hex-reverse {
+            animation: spinHex 20s linear infinite reverse;
+          }
+          .animate-grid-move {
+            animation: gridMove 30s linear infinite;
+          }
+          
           @keyframes spin {
             0% { transform: rotate(0deg);}
             100% { transform: rotate(360deg);}
@@ -205,6 +372,238 @@ export default function Home() {
           @keyframes pulse {
             0%, 100% { opacity: 0.7;}
             50% { opacity: 1;}
+          }
+          @keyframes gradientShift {
+            0%, 100% { 
+              background: linear-gradient(45deg, rgba(239, 68, 68, 0.2), rgba(168, 85, 247, 0.3), rgba(59, 130, 246, 0.4));
+            }
+            25% { 
+              background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(168, 85, 247, 0.4), rgba(239, 68, 68, 0.2));
+            }
+            50% { 
+              background: linear-gradient(225deg, rgba(168, 85, 247, 0.4), rgba(239, 68, 68, 0.2), rgba(59, 130, 246, 0.3));
+            }
+            75% { 
+              background: linear-gradient(315deg, rgba(239, 68, 68, 0.3), rgba(59, 130, 246, 0.4), rgba(168, 85, 247, 0.2));
+            }
+          }
+          @keyframes float1 {
+            0%, 100% { 
+              transform: translate(0, 0) scale(1); 
+              opacity: 0.15;
+            }
+            25% { 
+              transform: translate(30px, -20px) scale(1.1); 
+              opacity: 0.25;
+            }
+            50% { 
+              transform: translate(-20px, 30px) scale(0.95); 
+              opacity: 0.2;
+            }
+            75% { 
+              transform: translate(40px, 10px) scale(1.05); 
+              opacity: 0.18;
+            }
+          }
+          @keyframes float2 {
+            0%, 100% { 
+              transform: translate(0, 0) scale(1) rotate(0deg); 
+              opacity: 0.15;
+            }
+            33% { 
+              transform: translate(-40px, 25px) scale(1.15) rotate(120deg); 
+              opacity: 0.25;
+            }
+            66% { 
+              transform: translate(25px, -30px) scale(0.9) rotate(240deg); 
+              opacity: 0.2;
+            }
+          }
+          @keyframes float3 {
+            0%, 100% { 
+              transform: translate(0, 0) scale(1); 
+              opacity: 0.15;
+            }
+            20% { 
+              transform: translate(50px, 20px) scale(1.2); 
+              opacity: 0.3;
+            }
+            40% { 
+              transform: translate(-30px, -40px) scale(0.85); 
+              opacity: 0.18;
+            }
+            60% { 
+              transform: translate(35px, 45px) scale(1.1); 
+              opacity: 0.22;
+            }
+            80% { 
+              transform: translate(-25px, 15px) scale(0.95); 
+              opacity: 0.2;
+            }
+          }
+          @keyframes float4 {
+            0%, 100% { 
+              transform: translate(0, 0) scale(1); 
+              opacity: 0.15;
+            }
+            10% { 
+              transform: translate(-10px, 5px) scale(1.05); 
+              opacity: 0.25;
+            }
+            20% { 
+              transform: translate(15px, -10px) scale(0.95); 
+              opacity: 0.2;
+            }
+            30% { 
+              transform: translate(-20px, 15px) scale(1.1); 
+              opacity: 0.18;
+            }
+            40% { 
+              transform: translate(25px, -5px) scale(0.98); 
+              opacity: 0.22;
+            }
+            50% { 
+              transform: translate(-30px, 10px) scale(1.03); 
+              opacity: 0.2;
+            }
+            60% { 
+              transform: translate(35px, -15px) scale(1.07); 
+              opacity: 0.18;
+            }
+            70% { 
+              transform: translate(-40px, 20px) scale(0.95); 
+              opacity: 0.22;
+            }
+            80% { 
+              transform: translate(45px, -10px) scale(1.1); 
+              opacity: 0.2;
+            }
+          }
+          @keyframes float5 {
+            0%, 100% { 
+              transform: translate(0, 0) scale(1); 
+              opacity: 0.15;
+            }
+            5% { 
+              transform: translate(10px, -5px) scale(1.05); 
+              opacity: 0.25;
+            }
+            15% { 
+              transform: translate(-15px, 10px) scale(0.95); 
+              opacity: 0.2;
+            }
+            25% { 
+              transform: translate(20px, -15px) scale(1.1); 
+              opacity: 0.18;
+            }
+            35% { 
+              transform: translate(-25px, 5px) scale(0.98); 
+              opacity: 0.22;
+            }
+            45% { 
+              transform: translate(30px, -10px) scale(1.03); 
+              opacity: 0.2;
+            }
+            55% { 
+              transform: translate(-35px, 15px) scale(1.07); 
+              opacity: 0.18;
+            }
+            65% { 
+              transform: translate(40px, -20px) scale(0.95); 
+              opacity: 0.22;
+            }
+            75% { 
+              transform: translate(-45px, 10px) scale(1.1); 
+              opacity: 0.2;
+            }
+            85% { 
+              transform: translate(50px, -15px) scale(1.05); 
+              opacity: 0.18;
+            }
+          }
+          @keyframes twinkle {
+            0%, 100% { 
+              opacity: 0.3; 
+              transform: scale(1);
+              box-shadow: 0 0 10px currentColor;
+            }
+            50% { 
+              opacity: 1; 
+              transform: scale(1.5);
+              box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+            }
+          }
+          @keyframes wave {
+            0% {
+              background-position: 0% 50%;
+            }
+            100% {
+              background-position: 100% 50%;
+            }
+          }
+          @keyframes floatDiamond {
+            0%, 100% { 
+              transform: translate(0, 0) rotate(0deg); 
+              opacity: 0.15;
+            }
+            25% { 
+              transform: translate(10px, -10px) rotate(45deg) scale(1.1); 
+              opacity: 0.25;
+            }
+            50% { 
+              transform: translate(-10px, 10px) rotate(90deg) scale(0.95); 
+              opacity: 0.2;
+            }
+            75% { 
+              transform: translate(15px, 5px) rotate(135deg) scale(1.05); 
+              opacity: 0.18;
+            }
+          }
+          @keyframes spinHex {
+            0% { 
+              transform: rotate(0deg); 
+            }
+            100% { 
+              transform: rotate(360deg); 
+            }
+          }
+          @keyframes gridMove {
+            0% {
+              background-position: 0 0;
+            }
+            100% {
+              background-position: 100px 100px;
+            }
+          }
+          @keyframes wave1 {
+            0%, 100% { 
+              transform: translateX(0) scaleX(1); 
+              opacity: 0.05;
+            }
+            50% { 
+              transform: translateX(100px) scaleX(1.5); 
+              opacity: 0.1;
+            }
+          }
+          @keyframes wave2 {
+            0%, 100% { 
+              transform: translateX(0) scaleY(1); 
+              opacity: 0.05;
+            }
+            50% { 
+              transform: translateX(-120px) scaleY(1.3); 
+              opacity: 0.1;
+            }
+          }
+          @keyframes wave3 {
+            0%, 100% { 
+              transform: translateY(0) scale(1); 
+              opacity: 0.05;
+            }
+            50% { 
+              transform: translateY(80px) scale(1.2); 
+              opacity: 0.1;
+            }
           }
         `}
       </style>
