@@ -84,71 +84,100 @@ export default function Home() {
               />
       </div>
 
-      {/* 히어로 섹션 */}
-      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-700 shadow-2xl">
-        {/* 배경 그라데이션 */}
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/90 via-red-800/85 to-slate-900/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+      {/* 히어로 섹션 - 모던한 트렌드 디자인 */}
+      <section className="relative w-full min-h-[100vh] flex items-center justify-center overflow-hidden">
+        {/* 메인 배경 그라데이션 */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-gray-900/90 to-black/95 backdrop-blur-sm" />
+        
+        {/* 글래스모피즘 배경 */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/3 backdrop-blur-3xl" />
+        
+        {/* 네온 글로우 효과 */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/20 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '1s'}} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '2s'}} />
+        </div>
 
-        {/* stadium.png (축구장) 배경 */}
-        <Image
-          src="/stadium.png"
-          alt="축구장 배경"
-          fill
-          style={{ objectFit: "cover", opacity: 0.25 }}
-          priority
-          className="z-0"
-        />
+        {/* 메인 컨테이너 */}
+        <div className="relative z-30 flex flex-col items-center justify-center px-4 text-center max-w-6xl mx-auto">
+          {/* 로고 섹션 */}
+          <div className="relative mb-8">
+            {/* 로고 배경 글로우 */}
+            <div className="absolute inset-0 bg-gradient-to-r from-red-500/30 via-purple-500/30 to-blue-500/30 rounded-full blur-2xl animate-pulse-slow" />
+            
+            {/* 메인 로고 */}
+            <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center justify-center hover:scale-105 transition-all duration-500 hover:shadow-red-500/50">
+              <Image
+                src="/logo.png"
+                alt="하늘평화풋살클럽 로고"
+                width={200}
+                height={200}
+                className="w-3/4 h-3/4 object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+            
+            {/* 회전하는 링 */}
+            <div className="absolute inset-0 border-2 border-gradient-to-r from-red-400/50 via-transparent to-blue-400/50 rounded-full animate-spin-slow" />
+            <div className="absolute inset-4 border border-gradient-to-l from-purple-400/30 via-transparent to-pink-400/30 rounded-full animate-spin-reverse" />
+          </div>
 
-        {/* main.png (로고/마스코트 등) */}
-        <Image
-          src="/main.png"
-          alt="대문 이미지"
-          fill
-          style={{ objectFit: "contain" }}
-          priority
-          className="z-10 opacity-95"
-        />
-
-        {/* 빛나는 라인 */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full border-8 border-red-400/20 animate-spin-slow z-20 pointer-events-none" />
-
-        {/* 오버레이 효과 */}
-        <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 via-transparent to-slate-900/40 z-20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent z-25" />
-
-        {/* 중앙 타이틀 */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center z-30 px-4">
-          <h1
-            className="text-6xl md:text-7xl font-black text-white drop-shadow-2xl text-center tracking-tight"
-            style={{
-              textShadow:
-                "0 4px 24px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.1)",
-              background:
-                "linear-gradient(135deg, #fff 0%, #f8f9fa 50%, #e9ecef 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            하늘평화풋살클럽
+          {/* 타이틀 */}
+          <h1 className="relative mb-6">
+            <span className="block text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent drop-shadow-2xl tracking-tight leading-tight">
+              하늘평화풋살클럽
+            </span>
+            <span className="absolute inset-0 text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-red-400 via-purple-400 to-blue-400 bg-clip-text text-transparent opacity-50 blur-sm animate-pulse">
+              하늘평화풋살클럽
+            </span>
           </h1>
-          <span className="mt-4 text-xl md:text-2xl text-red-200 font-semibold tracking-wide drop-shadow-lg bg-black/30 px-6 py-2 rounded-full border border-white/10">
-            모두가 함께하는 축구의 즐거움!
-          </span>
+
+          {/* 서브타이틀 */}
+          <div className="relative mb-8">
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-medium bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent drop-shadow-lg">
+              모두가 함께하는 축구의 즐거움
+            </p>
+          </div>
+
+          {/* 설명 텍스트 */}
+          <div className="relative max-w-3xl mx-auto mb-12">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light bg-black/20 backdrop-blur-md rounded-2xl px-8 py-6 border border-white/10 shadow-2xl">
+              건강한 신체와 밝은 마음으로 함께하는 풋살 클럽입니다.<br />
+              <span className="text-red-300 font-medium">지금 바로 우리와 함께 시작해보세요!</span>
+            </p>
+          </div>
+
+          {/* CTA 버튼 */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <Link
+              href="/join"
+              className="group relative px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105 border border-red-400/50 backdrop-blur-sm"
+            >
+              <span className="relative z-10">클럽 가입하기</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-red-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
+            </Link>
+            <Link
+              href="/schedule"
+              className="group relative px-8 py-4 bg-gradient-to-r from-transparent to-transparent text-white font-bold text-lg rounded-full shadow-2xl border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105"
+            >
+              <span className="relative z-10">경기 일정 보기</span>
+            </Link>
+          </div>
         </div>
 
-        {/* 하단 소개문구 */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center px-4">
-          <p
-            className="text-lg md:text-2xl max-w-2xl leading-relaxed text-white font-medium bg-black/30 rounded-2xl px-8 py-4 shadow-2xl backdrop-blur-md text-center border border-white/20"
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}
-          >
-            모두가 함께 즐기는 풋살, 하늘평화풋살클럽에서 시작하세요.
-            <br />
-            건강한 운동과 따뜻한 교류, 지금 바로 함께해요!
-          </p>
+        {/* 하단 스크롤 인디케이터 */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
+          </div>
         </div>
+
+        {/* 장식용 기하학적 요소들 */}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-red-400/50 rounded-full animate-twinkle-1" />
+        <div className="absolute top-32 right-24 w-3 h-3 bg-blue-400/50 rounded-full animate-twinkle-2" />
+        <div className="absolute bottom-40 left-16 w-2 h-2 bg-purple-400/50 rounded-full animate-twinkle-3" />
+        <div className="absolute bottom-20 right-20 w-4 h-4 bg-pink-400/50 rounded-full animate-twinkle-1" />
       </section>
 
       {/* 주요 메뉴 카드 */}
