@@ -225,6 +225,106 @@ export default function Home() {
         </Link>
       </section>
 
+      {/* 경기 사진 갤러리 섹션 */}
+      <section className="w-full mt-16 px-4 relative">
+        <div className="max-w-7xl mx-auto">
+          {/* 섹션 타이틀 */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                경기 현장
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              하늘평화풋살클럽의 열정적인 경기 모습을 만나보세요
+            </p>
+          </div>
+
+          {/* 메인 갤러리 그리드 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {/* 대형 피처 이미지 */}
+            <div className="lg:col-span-2 lg:row-span-2">
+              <div className="group relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-slate-600 hover:border-red-500 transition-all duration-300">
+                <Image
+                  src="/20250615.jpeg"
+                  alt="주요 경기 사진"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-2xl font-bold mb-2">2025.06.15 경기</h3>
+                  <p className="text-sm text-gray-300">치열한 경기 현장의 모습</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 작은 이미지들 */}
+            <div className="space-y-6">
+              <div className="group relative h-[190px] rounded-2xl overflow-hidden shadow-xl border border-slate-600 hover:border-red-500 transition-all duration-300">
+                <Image
+                  src="/20250223.jpeg"
+                  alt="경기 사진"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">2025.02.23</p>
+                </div>
+              </div>
+
+              <div className="group relative h-[190px] rounded-2xl overflow-hidden shadow-xl border border-slate-600 hover:border-red-500 transition-all duration-300">
+                <Image
+                  src="/20250309.jpeg"
+                  alt="경기 사진"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">2025.03.09</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 추가 이미지 그리드 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { src: "/20250313.jpeg", date: "2025.03.13" },
+              { src: "/20250406.jpeg", date: "2025.04.06" },
+              { src: "/20250504.jpeg", date: "2025.05.04" },
+              { src: "/20250706.jpeg", date: "2025.07.06" }
+            ].map((photo, index) => (
+              <div key={index} className="group relative h-[200px] rounded-xl overflow-hidden shadow-lg border border-slate-600 hover:border-red-500 transition-all duration-300">
+                <Image
+                  src={photo.src}
+                  alt={`경기 사진 ${photo.date}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-2 left-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-xs font-medium">{photo.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 더보기 버튼 */}
+          <div className="text-center mt-12">
+            <Link
+              href="/photos"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105 border border-red-400/50 backdrop-blur-sm"
+            >
+              <FaCameraRetro className="text-xl" />
+              <span>더 많은 사진 보기</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 클럽 비전/연혁 카드 */}
       <section className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 px-4">
         <div className="relative bg-gradient-to-br from-red-900/80 to-red-800/60 rounded-2xl p-8 shadow-2xl border border-red-600/50 flex flex-col items-center backdrop-blur-sm overflow-hidden">
