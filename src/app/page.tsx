@@ -85,7 +85,7 @@ export default function Home() {
       </div>
 
       {/* 히어로 섹션 - 모던한 트렌드 디자인 */}
-      <section className="relative w-full min-h-[100vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-[100vh] flex items-center justify-center overflow-hidden pt-20">
         {/* 메인 배경 그라데이션 */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-gray-900/90 to-black/95 backdrop-blur-sm" />
         
@@ -100,14 +100,14 @@ export default function Home() {
         </div>
 
         {/* 메인 컨테이너 */}
-        <div className="relative z-30 flex flex-col items-center justify-center px-4 text-center max-w-6xl mx-auto">
+        <div className="relative z-10 flex flex-col items-center justify-center px-4 text-center max-w-6xl mx-auto mt-8">
           {/* 로고 섹션 */}
-          <div className="relative mb-8">
+          <div className="relative mb-8 z-10">
             {/* 로고 배경 글로우 */}
             <div className="absolute inset-0 bg-gradient-to-r from-red-500/30 via-purple-500/30 to-blue-500/30 rounded-full blur-2xl animate-pulse-slow" />
             
             {/* 메인 로고 */}
-            <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center justify-center hover:scale-105 transition-all duration-500 hover:shadow-red-500/50">
+            <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center justify-center hover:scale-105 transition-all duration-500 hover:shadow-red-500/50 z-10">
               <Image
                 src="/logo.png"
                 alt="하늘평화풋살클럽 로고"
@@ -136,7 +136,7 @@ export default function Home() {
           {/* 서브타이틀 */}
           <div className="relative mb-8">
             <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-medium bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-clip-text text-transparent drop-shadow-lg">
-              모두가 함께하는 축구의 즐거움
+              모두가 함께하는 풋살의 즐거움
             </p>
           </div>
 
@@ -149,14 +149,7 @@ export default function Home() {
           </div>
 
           {/* CTA 버튼 */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center">
-            <Link
-              href="/join"
-              className="group relative px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105 border border-red-400/50 backdrop-blur-sm"
-            >
-              <span className="relative z-10">클럽 가입하기</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-red-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-4 items-center">       
             <Link
               href="/schedule"
               className="group relative px-8 py-4 bg-gradient-to-r from-transparent to-transparent text-white font-bold text-lg rounded-full shadow-2xl border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105"
@@ -167,21 +160,21 @@ export default function Home() {
         </div>
 
         {/* 하단 스크롤 인디케이터 */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
           </div>
         </div>
 
         {/* 장식용 기하학적 요소들 */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-red-400/50 rounded-full animate-twinkle-1" />
-        <div className="absolute top-32 right-24 w-3 h-3 bg-blue-400/50 rounded-full animate-twinkle-2" />
-        <div className="absolute bottom-40 left-16 w-2 h-2 bg-purple-400/50 rounded-full animate-twinkle-3" />
-        <div className="absolute bottom-20 right-20 w-4 h-4 bg-pink-400/50 rounded-full animate-twinkle-1" />
+        <div className="absolute top-20 left-20 w-2 h-2 bg-red-400/50 rounded-full animate-twinkle-1 z-10" />
+        <div className="absolute top-32 right-24 w-3 h-3 bg-blue-400/50 rounded-full animate-twinkle-2 z-10" />
+        <div className="absolute bottom-40 left-16 w-2 h-2 bg-purple-400/50 rounded-full animate-twinkle-3 z-10" />
+        <div className="absolute bottom-20 right-20 w-4 h-4 bg-pink-400/50 rounded-full animate-twinkle-1 z-10" />
       </section>
 
       {/* 주요 메뉴 카드 */}
-      <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 -mt-16 z-30 relative">
+      <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 -mt-16 z-20 relative">
         <Link
           href="/squad"
           className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl border border-slate-600 hover:scale-105 hover:shadow-red-500/30 hover:border-red-500 transition-all duration-300 flex flex-col items-center p-6 min-h-[200px] backdrop-blur-sm relative overflow-hidden"
@@ -264,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* 하단 소셜/문의 */}
-      <footer className="w-full flex flex-col items-center gap-2 mt-12 mb-6 z-40">
+      <footer className="w-full flex flex-col items-center gap-2 mt-12 mb-6 z-20">
         <div className="flex gap-6">
           <a
             href="https://instagram.com/"

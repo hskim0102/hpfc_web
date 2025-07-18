@@ -13,6 +13,12 @@ export default function Schedule() {
         </thead>
         <tbody>
           <tr>
+            <td className="py-2 px-4">2025-07-20</td>
+            <td className="py-2 px-4">평화FC</td>
+            <td className="py-2 px-4">서경대학교 실내구장</td>
+            <td className="py-2 px-4">친선전</td>
+          </tr>
+          <tr>
             <td className="py-2 px-4">2025-07-06</td>
             <td className="py-2 px-4">평화FC</td>
             <td className="py-2 px-4">아크풋살스타디움</td>
