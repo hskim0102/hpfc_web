@@ -246,15 +246,15 @@ export default function Home() {
             <div className="lg:col-span-2 lg:row-span-2">
               <div className="group relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-slate-600 hover:border-red-500 transition-all duration-300">
                 <Image
-                  src="/20250615.jpeg"
+                  src="/20250720.jpeg"
                   alt="주요 경기 사진"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-2xl font-bold mb-2">2025.06.15 경기</h3>
-                  <p className="text-sm text-gray-300">치열한 경기 현장의 모습</p>
+                  <h3 className="text-2xl font-bold mb-2">2025.07.20 경기</h3>
+                  <p className="text-sm text-gray-300">3:3 쉬는 타임 없이</p>
                 </div>
               </div>
             </div>
@@ -296,6 +296,7 @@ export default function Home() {
               { src: "/20250406.jpeg", date: "2025.04.06" },
               { src: "/20250504.jpeg", date: "2025.05.04" },
               { src: "/20250706.jpeg", date: "2025.07.06" }
+              //{ src: "/20250720.jpeg", date: "2025.07.20" }
             ].map((photo, index) => (
               <div key={index} className="group relative h-[200px] rounded-xl overflow-hidden shadow-lg border border-slate-600 hover:border-red-500 transition-all duration-300">
                 <Image

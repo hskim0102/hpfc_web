@@ -216,7 +216,7 @@ export default function Squad() {
               name: "김호섭",
               pos: "아라 (ALA)",
               desc: "럭키 가이",
-              stats: [75, 65, 60, 80, 70, 80],
+              stats: [75, 70, 70, 80, 70, 80],
             },
           ].map((p) => (
             <div
