@@ -242,11 +242,13 @@ export default function Home() {
 
           {/* 메인 갤러리 그리드 */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            
             {/* 대형 피처 이미지 */}
+
             <div className="lg:col-span-2 lg:row-span-2">
               <div className="group relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-slate-600 hover:border-red-500 transition-all duration-300">
                 <Image
-                  src="/20250720.jpeg"
+                  src="/20250803.jpg"
                   alt="주요 경기 사진"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -263,7 +265,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="group relative h-[190px] rounded-2xl overflow-hidden shadow-xl border border-slate-600 hover:border-red-500 transition-all duration-300">
                 <Image
-                  src="/20250223.jpeg"
+                  src="/20250720.jpeg"
                   alt="경기 사진"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -348,11 +350,14 @@ export default function Home() {
           </div>
           <h2 className="text-3xl font-bold mb-4 text-white drop-shadow-lg flex items-center gap-2">
             <span className="inline-block w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
-            연혁
+            하늘평화FC 소개
           </h2>
           <ul className="list-disc list-inside text-left text-slate-200 space-y-2 text-lg">
-            <li>2024년 3월: 하늘평화풋살클럽 창단</li>
-            <li>2024년 4월: 첫 공식 시합 개최</li>
+            <li>2024년 7월 14일 : 하늘평화풋살클럽 창단</li>
+            <li>구단주 : 이승재</li>
+            <li>감독&총무 : 이한빈</li>
+            <li>선수단 : 17명</li>
+            <li>경기일정 : 매월 1,3주차 주일 새벽</li>
           </ul>
         </div>
       </section>

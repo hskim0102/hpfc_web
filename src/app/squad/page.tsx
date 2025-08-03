@@ -215,8 +215,15 @@ export default function Squad() {
               img: "/kim.png",
               name: "김호섭",
               pos: "아라 (ALA)",
-              desc: "럭키 가이",
+              desc: "불꽃 왼발",
               stats: [75, 70, 70, 80, 70, 80],
+            },
+            {
+              img: "/park_friend.jpg",
+              name: "박태욱",
+              pos: "피보 (PIVO)",
+              desc: "히든 카드",
+              stats: [90, 80, 85, 80, 85, 80],
             },
           ].map((p) => (
             <div
