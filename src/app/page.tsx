@@ -363,7 +363,30 @@ export default function Home() {
       </section>
 
       {/* 하단 소셜/문의 */}
-      <footer className="w-full flex flex-col items-center gap-2 mt-12 mb-6 z-20">
+      <footer className="w-full flex flex-col items-center gap-6 mt-12 mb-6 z-20">
+        {/* 로고 섹션 */}
+        <div className="flex gap-8 items-center">          
+          <div className="relative group">
+            <Image
+              src="/dong_logo.png"
+              alt="동 로고"
+              width={80}
+              height={80}
+              className="object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-lg"
+            />
+          </div>
+          
+          <div className="relative group">
+            <Image
+              src="/kim_logo.png"
+              alt="김 로고"
+              width={80}
+              height={80}
+              className="object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-lg"
+            />
+          </div>          
+        </div>
+        {/* 소셜 링크 */}
         <div className="flex gap-6">
           <a
             href="https://instagram.com/"
@@ -380,6 +403,7 @@ export default function Home() {
             <FaEnvelope />
           </a>
         </div>
+        
         <span className="text-slate-400 text-sm mt-2">
           © 2024 하늘평화풋살클럽
         </span>
