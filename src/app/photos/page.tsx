@@ -31,6 +31,24 @@ export default function Photos() {
           <div className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-2xl border border-slate-600 hover:scale-105 hover:shadow-red-500/20 hover:border-red-500 transition-all duration-300 overflow-hidden">
             <div className="relative h-64">
               <Image
+                src="/20250817.jpeg"
+                alt="2025년 8월 17일 경기"
+                fill
+                style={{ objectFit: "cover" }}
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="text-lg font-bold text-white mb-2">
+                2025년 8월 17일 경기
+              </h3>
+              <p className="text-slate-300 text-sm">서경대학교 실내장장</p>
+            </div>
+          </div>
+
+          <div className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-2xl border border-slate-600 hover:scale-105 hover:shadow-red-500/20 hover:border-red-500 transition-all duration-300 overflow-hidden">
+            <div className="relative h-64">
+              <Image
                 src="/20250803.jpg"
                 alt="2025년 8월  3일 경기"
                 fill
@@ -45,7 +63,6 @@ export default function Photos() {
               <p className="text-slate-300 text-sm">강북 아크풋살 스타디움</p>
             </div>
           </div>
-
 
           <div className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-2xl border border-slate-600 hover:scale-105 hover:shadow-red-500/20 hover:border-red-500 transition-all duration-300 overflow-hidden">
             <div className="relative h-64">
